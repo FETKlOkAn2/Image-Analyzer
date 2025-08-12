@@ -1,0 +1,9 @@
+boto3
+pillow
+imagehash
+numpy
+scikit-image
+opencv-python
+pytesseract
+requests
+scikit-learn
