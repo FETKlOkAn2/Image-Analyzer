@@ -4,6 +4,7 @@ imagehash
 numpy
 scikit-image
 opencv-python
+pandas
 pytesseract
 requests
 scikit-learn

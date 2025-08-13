@@ -1,0 +1,12 @@
+{
+  "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSez_skPqKDaYWkFNrBrvU8cBxnt405GYOZqw&s",
+  "watermark": false,
+  "wm_reason": "ocr_error: tesseract is not installed or it's not in your PATH. See README file for more information.",
+  "ssim": null,
+  "white_ok": false,
+  "corner_means": [],
+  "selected": false,
+  "download_order": 1,
+  "cluster": 1,
+  "phash": "bc8dc6cd92731c32d936338638c8665964db9cf1339c19869b368e73cce16699"
+}

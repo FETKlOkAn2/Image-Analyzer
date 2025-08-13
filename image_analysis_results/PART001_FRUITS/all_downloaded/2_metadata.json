@@ -1,0 +1,12 @@
+{
+  "url": "https://th-thumbnailer.cdn-si-edu.com/e5t4TtPeT6Y4yLTLHKxXiNBtwDQ=/470x251/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/20110721125011banana2.jpg",
+  "watermark": false,
+  "wm_reason": "ocr_error: tesseract is not installed or it's not in your PATH. See README file for more information.",
+  "ssim": null,
+  "white_ok": false,
+  "corner_means": [],
+  "selected": false,
+  "download_order": 2,
+  "cluster": 2,
+  "phash": "ada4c9a4926936dbc5923252164bd2c93059cf25336cc6dd1b83767accde3b07"
+}

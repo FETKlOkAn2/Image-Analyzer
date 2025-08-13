@@ -1,0 +1,55 @@
+{
+  "part_number": "PART002_MECHANICAL",
+  "results": [
+    {
+      "original_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500",
+      "local_paths": {
+        "original_path": "image_analysis_results\\PART002_MECHANICAL\\selected_0_original.jpg",
+        "metadata_path": "image_analysis_results\\PART002_MECHANICAL\\selected_0_metadata.json",
+        "overlay_path": "image_analysis_results\\PART002_MECHANICAL\\selected_0_analysis.jpg"
+      },
+      "phash": "f534ec344a29f479b574813407f9db7b61b383351b5869ba5299121d3b2c72d8",
+      "ssim_center": 1.0,
+      "white_ok": false,
+      "corner_means": [
+        132.1796875
+      ],
+      "watermark_flag": false,
+      "watermark_reason": "ocr_error: tesseract is not installed or it's not in your PATH. See README file for more information.",
+      "download_order": 0,
+      "cluster": 0
+    }
+  ],
+  "metrics": {
+    "part_number": "PART002_MECHANICAL",
+    "urls_attempted": 5,
+    "successful_downloads": 3,
+    "failed_downloads": 2,
+    "watermarked_count": 0,
+    "final_count": 1,
+    "white_bg_count": 0,
+    "avg_ssim": 1.0,
+    "cluster_info": {
+      "clusters": 3,
+      "cluster_sizes": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "method": "dbscan_hamming"
+    },
+    "errors": [
+      {
+        "type": "download_error",
+        "url": "https://example.com/nonexistent1.jpg",
+        "error": "404 Client Error: Not Found for url: https://example.com/nonexistent1.jpg"
+      },
+      {
+        "type": "download_error",
+        "url": "https://example.com/nonexistent2.jpg",
+        "error": "404 Client Error: Not Found for url: https://example.com/nonexistent2.jpg"
+      }
+    ],
+    "processing_time": 26.721145391464233
+  }
+}

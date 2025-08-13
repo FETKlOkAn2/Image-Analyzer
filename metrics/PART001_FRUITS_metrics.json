@@ -1,0 +1,50 @@
+{
+  "part_number": "PART001_FRUITS",
+  "results": [
+    {
+      "original_url": "https://medilifefood.com/wp-content/uploads/2019/10/purepng.com-red-appleappleapplesfruitsweet-1701527180174lrnig.png",
+      "local_paths": {
+        "original_path": "image_analysis_results\\PART001_FRUITS\\selected_0_original.jpg",
+        "metadata_path": "image_analysis_results\\PART001_FRUITS\\selected_0_metadata.json",
+        "overlay_path": "image_analysis_results\\PART001_FRUITS\\selected_0_analysis.jpg"
+      },
+      "phash": "fe889dd9915f1ea44feaca37e727e077e0a2e0c0e689ce11f6157940f1a4c342",
+      "ssim_center": 1.0,
+      "white_ok": true,
+      "corner_means": [
+        254.95617070357554,
+        255.0,
+        255.0,
+        255.0
+      ],
+      "watermark_flag": false,
+      "watermark_reason": "ocr_error: tesseract is not installed or it's not in your PATH. See README file for more information.",
+      "download_order": 0,
+      "cluster": 0
+    }
+  ],
+  "metrics": {
+    "part_number": "PART001_FRUITS",
+    "urls_attempted": 6,
+    "successful_downloads": 6,
+    "failed_downloads": 0,
+    "watermarked_count": 0,
+    "final_count": 1,
+    "white_bg_count": 1,
+    "avg_ssim": 1.0,
+    "cluster_info": {
+      "clusters": 6,
+      "cluster_sizes": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "method": "dbscan_hamming"
+    },
+    "errors": [],
+    "processing_time": 3.176499605178833
+  }
+}

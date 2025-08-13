@@ -1,0 +1,12 @@
+{
+  "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500",
+  "watermark": false,
+  "wm_reason": "ocr_error: tesseract is not installed or it's not in your PATH. See README file for more information.",
+  "ssim": null,
+  "white_ok": false,
+  "corner_means": [],
+  "selected": false,
+  "download_order": 1,
+  "cluster": 1,
+  "phash": "9a6964b46596d2dbda61196dcc1e669233cb9b4d9924ccb066db330f99a4cce1"
+}

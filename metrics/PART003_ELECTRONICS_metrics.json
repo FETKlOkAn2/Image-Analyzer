@@ -1,0 +1,44 @@
+{
+  "part_number": "PART003_ELECTRONICS",
+  "results": [
+    {
+      "original_url": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=500",
+      "local_paths": {
+        "original_path": "image_analysis_results\\PART003_ELECTRONICS\\selected_0_original.jpg",
+        "metadata_path": "image_analysis_results\\PART003_ELECTRONICS\\selected_0_metadata.json",
+        "overlay_path": "image_analysis_results\\PART003_ELECTRONICS\\selected_0_analysis.jpg"
+      },
+      "phash": "e19194f74798921dd271dc66dccaf43a5b64dcc87e9372c320cd3b5388cca931",
+      "ssim_center": 1.0,
+      "white_ok": false,
+      "corner_means": [
+        73.3828125
+      ],
+      "watermark_flag": false,
+      "watermark_reason": "ocr_error: tesseract is not installed or it's not in your PATH. See README file for more information.",
+      "download_order": 0,
+      "cluster": 0
+    }
+  ],
+  "metrics": {
+    "part_number": "PART003_ELECTRONICS",
+    "urls_attempted": 3,
+    "successful_downloads": 3,
+    "failed_downloads": 0,
+    "watermarked_count": 0,
+    "final_count": 1,
+    "white_bg_count": 0,
+    "avg_ssim": 1.0,
+    "cluster_info": {
+      "clusters": 3,
+      "cluster_sizes": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "method": "dbscan_hamming"
+    },
+    "errors": [],
+    "processing_time": 0.4464414119720459
+  }
+}

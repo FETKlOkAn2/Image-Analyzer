@@ -1,0 +1,4 @@
+part_number,original_url,phash,ssim_center,white_ok,watermark_flag,download_order,cluster
+PART001_FRUITS,https://medilifefood.com/wp-content/uploads/2019/10/purepng.com-red-appleappleapplesfruitsweet-1701527180174lrnig.png,fe889dd9915f1ea44feaca37e727e077e0a2e0c0e689ce11f6157940f1a4c342,1.0,True,False,0,0
+PART002_MECHANICAL,https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500,f534ec344a29f479b574813407f9db7b61b383351b5869ba5299121d3b2c72d8,1.0,False,False,0,0
+PART003_ELECTRONICS,https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=500,e19194f74798921dd271dc66dccaf43a5b64dcc87e9372c320cd3b5388cca931,1.0,False,False,0,0

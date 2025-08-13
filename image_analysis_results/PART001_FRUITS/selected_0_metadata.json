@@ -1,0 +1,18 @@
+{
+  "url": "https://medilifefood.com/wp-content/uploads/2019/10/purepng.com-red-appleappleapplesfruitsweet-1701527180174lrnig.png",
+  "watermark": false,
+  "wm_reason": "ocr_error: tesseract is not installed or it's not in your PATH. See README file for more information.",
+  "ssim": null,
+  "white_ok": true,
+  "corner_means": [
+    254.95617070357554,
+    255.0,
+    255.0,
+    255.0
+  ],
+  "selected": true,
+  "download_order": 0,
+  "cluster": 0,
+  "ssim_center": 1.0,
+  "phash": "fe889dd9915f1ea44feaca37e727e077e0a2e0c0e689ce11f6157940f1a4c342"
+}
