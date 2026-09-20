@@ -1,0 +1,98 @@
+name: 🐛 Bug report
+description: Something in the pipeline doesn't behave as documented
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please **don't** use this template for security
+        vulnerabilities — follow [SECURITY.md](../blob/main/SECURITY.md) instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you get instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: >
+        Ideally a minimal part number plus URL list. If the input images can't be
+        shared, describe them (resolution, background, watermark present, format).
+      placeholder: |
+        1. Set MAX_DOWNLOAD to ...
+        2. Run run_batch_analysis({"PART001": [...]})
+        3. See ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Which pipeline stage?
+      options:
+        - Download
+        - Watermark detection (OCR)
+        - Perceptual hashing
+        - Clustering (DBSCAN)
+        - SSIM / background check
+        - Ranking & selection
+        - Saving / metadata / overlay
+        - S3 upload
+        - Metrics & reporting
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Relevant metrics or error output
+      description: >
+        Paste the `errors` array from the part metrics JSON, or the console output.
+      render: shell
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      placeholder: "3.11.6"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "macOS 14.5 / Ubuntu 22.04 / Windows 11"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tesseract
+    attributes:
+      label: Is the Tesseract binary installed and on your PATH?
+      description: >
+        `tesseract --version` should print a version. Without it, watermark
+        detection reports every image as clean.
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for a duplicate
+          required: true
+        - label: This is not a security vulnerability (those go through SECURITY.md)
+          required: true

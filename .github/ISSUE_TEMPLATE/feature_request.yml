@@ -1,0 +1,63 @@
+name: 💡 Feature request
+description: Suggest an improvement to the pipeline
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the situation that's currently awkward or impossible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Download / fetching
+        - Watermark detection
+        - Similarity & clustering
+        - Quality checks
+        - Ranking & selection
+        - S3 / upload
+        - Metrics & reporting
+        - CLI / developer experience
+        - Testing
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: deps
+    attributes:
+      label: Dependencies
+      options:
+        - label: This would require a new third-party dependency
+        - label: This would change existing default behaviour
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      description: >
+        See [Responsible use](../blob/main/README.md#️-responsible-use).
+      options:
+        - label: >
+            This is not a request to remove, obscure or circumvent watermarks on
+            third-party images
+          required: true
