@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: 🔐 Report a security vulnerability
+  - name: Report a security vulnerability
     url: https://github.com/FETKlOkAn2/Image-Analyzer/security/advisories/new
     about: Please report vulnerabilities privately, not as a public issue.
-  - name: ⚖️ Compliance and responsible use
+  - name: Compliance and responsible use
     url: https://github.com/FETKlOkAn2/Image-Analyzer/blob/main/COMPLIANCE.md
     about: Image rights, credential handling, data flow and accuracy limits.

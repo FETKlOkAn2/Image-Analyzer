@@ -1,4 +1,4 @@
-name: 💡 Feature request
+name: Feature request
 description: Suggest an improvement to the pipeline
 title: "[Feature]: "
 labels: ["enhancement"]
@@ -55,7 +55,7 @@ body:
     attributes:
       label: Scope check
       description: >
-        See [Responsible use](../blob/main/README.md#️-responsible-use).
+        See [Responsible use](../blob/main/README.md#responsible-use).
       options:
         - label: >
             This is not a request to remove, obscure or circumvent watermarks on

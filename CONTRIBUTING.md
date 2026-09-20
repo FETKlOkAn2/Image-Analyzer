@@ -1,7 +1,6 @@
 # Contributing to Image Analyzer
 
-Thanks for taking an interest. This is a prototype, which means contributions are
-genuinely useful — there's a lot of low-hanging fruit in the
+This is a prototype, so there is plenty of low-hanging fruit in the
 [roadmap](README.md#roadmap).
 
 By participating you agree to abide by the [Code of Conduct](CODE_OF_CONDUCT.md).
@@ -10,11 +9,11 @@ By participating you agree to abide by the [Code of Conduct](CODE_OF_CONDUCT.md)
 
 | | |
 |---|---|
-| 🐛 **Report a bug** | [Open a bug report](https://github.com/FETKlOkAn2/Image-Analyzer/issues/new?template=bug_report.yml) |
-| 💡 **Suggest a feature** | [Open a feature request](https://github.com/FETKlOkAn2/Image-Analyzer/issues/new?template=feature_request.yml) |
-| 🔐 **Report a vulnerability** | **Don't** open an issue — follow [SECURITY.md](SECURITY.md) |
-| 📝 **Improve the docs** | PRs welcome directly, no issue needed |
-| 🧪 **Extend the tests** | Especially welcome — see the coverage gaps below |
+| **Report a bug** | [Open a bug report](https://github.com/FETKlOkAn2/Image-Analyzer/issues/new?template=bug_report.yml) |
+| **Suggest a feature** | [Open a feature request](https://github.com/FETKlOkAn2/Image-Analyzer/issues/new?template=feature_request.yml) |
+| **Report a vulnerability** | Do not open an issue. Follow [SECURITY.md](SECURITY.md) |
+| **Improve the docs** | PRs welcome directly, no issue needed |
+| **Extend the tests** | Especially welcome. See the coverage gaps below |
 
 ## Development setup
 
@@ -25,19 +24,19 @@ python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
 ```
 
-You also need the Tesseract OCR binary on your `PATH` — see
-[Prerequisites](README.md#prerequisites). Without it, watermark detection silently
-returns "no watermark", which will make your test results misleading.
+You also need the Tesseract OCR binary on your `PATH`, as described under
+[Prerequisites](README.md#prerequisites). Without it, watermark detection returns "no
+watermark" for everything, which makes your test results misleading.
 
 ### Sanity check
 
 ```bash
-pytest           # 25 tests, all offline — should pass before you start
+pytest           # 25 tests, all offline. These should pass before you start
 ruff check .
 ```
 
 Two tests exercise the OCR path and skip with a message if Tesseract is missing. If you
-see those skips, install the binary — otherwise you're not testing watermark detection.
+see those skips, install the binary. Otherwise you are not testing watermark detection.
 
 For a verbose single-image walkthrough while tuning thresholds:
 
@@ -51,27 +50,26 @@ python simple_analyzer.py
   `ruff check . --fix` before pushing; CI runs `ruff check .`.
 - **Line length:** 100 characters.
 - **Docstrings:** every public function gets one. Say what it returns, and be honest
-  about heuristics — if something is a guess, the docstring should say so, the way
+  about heuristics. If something is a guess, say so in the docstring, the way
   `detect_watermark_ocr` does.
 - **Type hints:** encouraged on new code, not required retroactively.
 - **No new hard dependencies** without discussing it in an issue first.
 
-### Two project-specific conventions
+### Two project conventions
 
-1. **Never let a filter return nothing.** Every stage in the pipeline has a fallback so
-   a part number doesn't silently end up with zero images because a threshold was too
-   aggressive. Preserve that property.
-2. **Errors go into `part_metrics['errors']`**, not just into a `print`. Each entry is a
-   dict with at minimum a `type` and an `error` key, so the run report can aggregate by
-   error type.
+1. **Never let a filter return nothing.** Every stage has a fallback, so no part number
+   ends up with zero images because a threshold was too aggressive. Keep that property.
+2. **Errors go into `part_metrics['errors']`** as well as any `print`. Each entry is a
+   dict carrying at least a `type` and an `error` key, so the run report can group them
+   by error type.
 
 ## Pull requests
 
-1. Fork and branch from `main` — `feat/short-description` or `fix/short-description`.
+1. Fork and branch from `main`, named `feat/short-description` or `fix/short-description`.
 2. Keep the change focused. One concern per PR.
 3. Update `README.md` if you change behaviour, config or requirements.
 4. If you add a config value, add it to the table in the README too.
-5. Fill in the PR template — particularly *how you tested it*.
+5. Fill in the PR template, above all the section on how you tested it.
 6. Commit messages: imperative mood, present tense
    (`add dry-run flag to S3 upload`, not `added` or `adds`).
 
@@ -91,7 +89,7 @@ tests/test_metrics.py        # Aggregation, rates, error grouping
 Two rules the suite depends on:
 
 - **No network calls.** Every fixture builds its image in memory. Mock
-  `utils.requests.get` rather than fetching anything — see `test_download.py`. This
+  `utils.requests.get` rather than fetching anything, as `test_download.py` does. This
   keeps CI deterministic and avoids hammering third-party hosts
   ([COMPLIANCE.md](COMPLIANCE.md#3-fetching-third-party-content)).
 - **Test the contract, not the OCR accuracy.** The watermark heuristic's precision is a
@@ -100,7 +98,7 @@ Two rules the suite depends on:
 
 Known coverage gaps, if you're looking for somewhere to start:
 
-- No integration test for `analyze_images_for_part()` — it needs a mocked download layer
+- No integration test for `analyze_images_for_part()`, which needs a mocked download layer
 - No test that the clustering stage picks the largest cluster
 - No test for `save_image_with_analysis()` writing the three expected files
 
@@ -121,10 +119,10 @@ a different watermark check or a new similarity metric, include in the PR:
 Contributions that make the pipeline better at filtering images you have the right to
 publish are in scope. Contributions aimed at **removing, obscuring or circumventing
 watermarks in order to republish third-party images** are out of scope and will be
-closed — see [Responsible use](README.md#️-responsible-use) and
+closed. See [Responsible use](README.md#responsible-use) and
 [COMPLIANCE.md](COMPLIANCE.md).
 
 ## Questions
 
-Open a [discussion or issue](https://github.com/FETKlOkAn2/Image-Analyzer/issues). For
-anything security-related, use the process in [SECURITY.md](SECURITY.md) instead.
+Open an [issue](https://github.com/FETKlOkAn2/Image-Analyzer/issues). For anything
+security-related, use the process in [SECURITY.md](SECURITY.md) instead.

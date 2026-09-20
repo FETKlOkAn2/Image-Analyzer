@@ -1,4 +1,4 @@
-name: 🐛 Bug report
+name: Bug report
 description: Something in the pipeline doesn't behave as documented
 title: "[Bug]: "
 labels: ["bug"]
@@ -6,8 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting. Please **don't** use this template for security
-        vulnerabilities — follow [SECURITY.md](../blob/main/SECURITY.md) instead.
+        Please do not use this template for security vulnerabilities. Follow
+        [SECURITY.md](../blob/main/SECURITY.md) instead.
 
   - type: textarea
     id: what-happened

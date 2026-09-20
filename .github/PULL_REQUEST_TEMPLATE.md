@@ -15,9 +15,9 @@ Closes #
 
 ## How was this tested?
 
-<!-- Required. Say what you actually ran. -->
+<!-- Required. Say what you ran. -->
 
-- [ ] `pytest` passes (no skips — Tesseract installed)
+- [ ] `pytest` passes with no skips, meaning Tesseract is installed
 - [ ] `ruff check .` passes
 - [ ] New behaviour has a test, and the test fails without the change
 - [ ] `python image_analyzer.py` completes on the bundled sample data
@@ -43,11 +43,11 @@ Closes #
 
 - [ ] `README.md` updated if behaviour, config or requirements changed
 - [ ] New config values added to the README configuration table
-- [ ] Every filter stage still has a fallback — no part can end up with zero images
+- [ ] Every filter stage still has a fallback, so no part ends up with zero images
       because a threshold was too aggressive
 - [ ] New errors are appended to `part_metrics['errors']` with a `type` key, not just
       printed
-- [ ] No new test reaches the network — images are built in memory, requests mocked
+- [ ] No new test reaches the network. Images are built in memory, requests mocked
 - [ ] No credentials, bucket names, internal URLs or real part numbers in the diff
 - [ ] No pipeline output committed (`image_analysis_results/`, `metrics/`,
       `final_images/` are git-ignored)

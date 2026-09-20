@@ -66,7 +66,7 @@ jobs:
 
       - name: Install Tesseract OCR
         # pytesseract shells out to this binary. Without it the OCR-dependent
-        # tests skip rather than fail, so install it explicitly to keep them live.
+        # tests skip rather than fail, so install it to keep them live.
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends tesseract-ocr

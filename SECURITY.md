@@ -7,8 +7,8 @@ supported; there are no tagged releases or backported fixes yet.
 
 | Version | Supported |
 |---|---|
-| `main` | ✅ |
-| Older commits | ❌ |
+| `main` | Yes |
+| Older commits | No |
 
 ## Reporting a vulnerability
 
@@ -43,7 +43,7 @@ rather than a commercial SLA.
 
 - Arbitrary code execution or path traversal via crafted image files, URLs or part
   numbers (note that `part_number` is used directly in filesystem paths)
-- Credential or secret leakage — including secrets ending up in metrics reports,
+- Credential or secret leakage, including secrets ending up in metrics reports,
   metadata sidecars or the annotated overlay images
 - Server-side request forgery through the URL download path
 - Denial of service via decompression bombs or pathological image dimensions
@@ -51,10 +51,10 @@ rather than a commercial SLA.
 
 **Out of scope:**
 
-- Vulnerabilities in Tesseract, Pillow, OpenCV or other upstream dependencies — report
-  those to the respective projects (do tell us if we should pin or patch around one)
-- The watermark heuristic producing false positives or negatives — that's a known
-  accuracy limitation, not a vulnerability; open a normal issue
+- Vulnerabilities in Tesseract, Pillow, OpenCV or other upstream dependencies. Report
+  those to the respective projects, though do tell us if we should pin or patch around one
+- The watermark heuristic producing false positives or negatives. That is a known
+  accuracy limitation rather than a vulnerability, so open a normal issue
 - Anything requiring the attacker to already control the machine running the pipeline
 - Results from running the tool against inputs you don't have permission to fetch
 
@@ -73,8 +73,8 @@ environment.
 
 ### It decodes untrusted images
 
-Pillow and OpenCV decode whatever bytes come back. Malformed or deliberately crafted
-images have historically been a source of memory-safety issues in image libraries.
+Pillow and OpenCV decode whatever bytes come back. Malformed or hostile images have a long
+history of triggering memory-safety issues in image libraries.
 Keep dependencies current (Dependabot is enabled), and consider setting
 `PIL.Image.MAX_IMAGE_PIXELS` to guard against decompression bombs.
 
@@ -89,12 +89,12 @@ untrusted sources.
 The pipeline never asks for credentials directly. `S3_BUCKET` comes from the
 environment and AWS credentials are resolved by `boto3`'s standard chain. Do not
 hardcode either. Use an IAM identity scoped to a single bucket prefix with write-only
-permissions — see [COMPLIANCE.md](COMPLIANCE.md#aws-and-credential-handling).
+permissions. [COMPLIANCE.md](COMPLIANCE.md#6-aws-and-credential-handling) has the policy.
 
 ### OCR is a subprocess
 
-`pytesseract` shells out to the `tesseract` binary. Make sure the binary on your `PATH`
-is one you installed deliberately.
+`pytesseract` shells out to the `tesseract` binary. Check that the binary on your `PATH` is one
+you installed yourself.
 
 ## Hardening checklist for production use
 
